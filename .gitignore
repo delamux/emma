@@ -20,7 +20,8 @@
 
 #Snapshot initial
 
-/config/Migrations/20161104214532_Initial.php
+/config/Migrations/20161104220947_Initial.php
+/config/Migrations/schema-dump-default.lock
 
 # CakePHP 2
 

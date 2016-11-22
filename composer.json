@@ -9,7 +9,10 @@
         "cakephp/cakephp": "3.3.*",
         "mobiledetect/mobiledetectlib": "2.*",
         "cakephp/migrations": "~1.0",
-        "cakephp/plugin-installer": "*"
+        "cakephp/plugin-installer": "*",
+        "maiconpinto/cakephp-adminlte-theme": "^1.0",
+        "cakedc/users": "^3.2",
+        "google/recaptcha": "@stable"
     },
     "require-dev": {
         "psy/psysh": "@stable",

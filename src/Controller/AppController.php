@@ -16,6 +16,7 @@ namespace App\Controller;
 
 use Cake\Controller\Controller;
 use Cake\Event\Event;
+use Cake\Core\Configure;
 
 /**
  * Application Controller
@@ -43,6 +44,7 @@ class AppController extends Controller
 
         $this->loadComponent('RequestHandler');
         $this->loadComponent('Flash');
+        $this->loadComponent('CakeDC/Users.UsersAuth');
     }
 
     /**
@@ -58,5 +60,19 @@ class AppController extends Controller
         ) {
             $this->set('_serialize', true);
         }
+
+        if (!$this->Auth->user())
+        {
+            $this->viewBuilder()->layout('login');
+        }
+        else
+        {
+            $this->viewBuilder()->theme('AdminLTE');
+        }
+
+        $this->set('theme', Configure::read('Theme'));
     }
+
+
+
 }

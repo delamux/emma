@@ -222,4 +222,43 @@ if (Configure::read('debug')) {
     Plugin::load('DebugKit', ['bootstrap' => true]);
 }
 
+/*
+ * Contruimmos el AdminLTE
+ *
+ *
+ * */
+
+
+
 Plugin::load('Migrations');
+/*
+ * Plugin Users
+ * */
+
+Plugin::load('CakeDC/Users', ['routes' => true, 'bootstrap' => true]);
+Configure::write('Users.config', ['users']);
+Configure::write('Users.Social.login', false); //to enable social login
+
+
+
+/*
+ * Plugin AdminLTE
+ */
+
+
+
+
+
+Plugin::load('AdminLTE', ['bootstrap' => true, 'routes' => true]);
+
+Configure::write('Theme', [
+    'title' => 'RLJ-EMMA',
+    'folder' => ROOT,
+    'logo' => [
+        'mini' => '<b>RLJ</b>EMMA',
+        'large' => '<b>RLJ</b>EMMA'
+    ]
+]);
+
+
+

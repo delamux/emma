@@ -105,4 +105,9 @@ class UsersController extends AppController
         }
         return $this->redirect(['action' => 'index']);
     }
+    public function logout(){
+        $this->Flash->success('Sesión Cerrada');
+        return $this->redirect($this->Auth->logout());
+    }
+
 }
